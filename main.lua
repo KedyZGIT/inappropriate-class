@@ -50,11 +50,8 @@ function love.draw()
 	local scale = 1
 	for y, xs in ipairs (map) do
 		for x, tile in ipairs (xs) do
-			love.graphics.draw(tile.image, (x-1)*tileSize*scale + xp, (y-1)*tileSize*scale + yp, 0, scale, scale)
+			love.graphics.draw(tile.image, (x-1)*tileSize*scale + xp, (y-1)*tileSize*scale + yp, 0, scale, scale) -- terrain generator
 		end
 	end
-end
-
-function love.draw()
-love.graphics.draw(player ,0 ,0)
+love.graphics.draw(player ,0 ,0) -- put sprites here or your CPU will die
 end
